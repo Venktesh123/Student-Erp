@@ -655,7 +655,7 @@ export const getAllAdmin = async (req, res) => {
 export const getAllDepartment = async (req, res) => {
   try {
     const departments = await Department.find();
-    res.status(200).json(departments);
+    return res.status(200).json(departments);
   } catch (error) {
     console.log("Backend Error", error);
   }
