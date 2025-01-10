@@ -29,7 +29,6 @@ export const adminLogin = async (req, res) => {
   const errors = { usernameError: String, passwordError: String };
   try {
     const existingAdmin = await Admin.findOne({ username });
-    console.log(existingAdmin, "exis");
     if (!existingAdmin) {
       errors.usernameError = "Admin doesn't exist.";
       return res.status(404).json(errors);
