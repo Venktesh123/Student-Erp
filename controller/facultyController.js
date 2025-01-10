@@ -32,12 +32,10 @@ export const facultyLogin = async (req, res) => {
       errors.usernameError = "Faculty doesn't exist.";
       return res.status(404).json(errors);
     }
-    console.log(password, existingFaculty.password);
     const isPasswordCorrect = await bcrypt.compare(
       password,
       existingFaculty.password
     );
-    console.log(isPasswordCorrect, "isPasswordCorrect");
     if (!isPasswordCorrect) {
       errors.passwordError = "Invalid Credentials";
       return res.status(404).json(errors);
