@@ -9,6 +9,7 @@ import studentRoutes from "./routes/studentRoutes.js";
 import facultyRoutes from "./routes/facultyRoutes.js";
 import { addDummyAdmin } from "./controller/adminController.js";
 import courseRoutes from "./routes/courseRoutes.js";
+import chatbotRoutes from "./routes/chatbotRoutes.js";
 
 const app = express();
 dotenv.config(); // Ensure this is called as early as possible
@@ -21,6 +22,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/faculty", facultyRoutes);
 app.use("/api/student", studentRoutes);
 app.use("/api/courses", courseRoutes);
+app.use("/api/chatboat", chatbotRoutes);
 
 const PORT = process.env.PORT || 5001;
 
