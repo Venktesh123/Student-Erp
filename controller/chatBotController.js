@@ -4,7 +4,7 @@ export const askQuestion = async (req, res) => {
   const { question } = req.body; // Corrected: Removed parentheses
   try {
     const response = await axios.post(
-      "https://5109-2409-40e3-4063-9d3c-7586-efff-effd-5811.ngrok-free.app/ask-question",
+      "https://485f-2409-40e3-3005-70b7-644a-3b5d-dfbc-5690.ngrok-free.app/ask-question",
       {
         question,
       }
